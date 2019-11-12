@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.ben.prayerschedule"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions "test_app"
+
+    productFlavors {
+        prod {
+            dimension "test_app"
+            buildConfigField "String", "BASE_URL", "\"http://api.aladhan.com/\""
+        }
+        dev {
+            dimension "test_app"
+            buildConfigField "String", "BASE_URL", "\"http://api.aladhan.com/\""
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        kotlinOptions {
+            jvmTarget = JavaVersion.VERSION_1_8
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Rx
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroid}"
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava}"
+    implementation "io.reactivex.rxjava2:rxkotlin:${rootProject.ext.rxkotlin}"
+    // Android Arch
+    implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.ext.lifecycle}"
+    //Glide
+    implementation "com.github.bumptech.glide:glide:${rootProject.ext.glide}"
+    // Gson
+    implementation "com.google.code.gson:gson:${rootProject.ext.gson}"
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.login_interceptor}"
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttp}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.rxjava_adapter}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit}"
+    implementation "com.basgeekball:awesome-validation:${rootProject.ext.awesomeValidation}"
+    implementation 'com.github.nikartm:image-support:1.0.5'
+
+    api "com.jakewharton.threetenabp:threetenabp:$rootProject.ext.threetenabp"
+}

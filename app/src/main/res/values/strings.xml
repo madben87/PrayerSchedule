@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Prayer Schedule</string>
+
+    <!-- Global Strings -->
+    <string name="Global_signIn">Sign In</string>
+    <string name="Global_signUp">Sign Up</string>
+    <string name="Global_signOut">Sign Out</string>
+    <string name="Global_save">Save</string>
+    <string name="Global_signUpUnderlined"><u>Sign Up</u></string>
+    <string name="Global_filters">Filters</string>
+    <string name="Global_loremIpsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Color sit amet, consectetuer adipiscing elit. Aenean commod</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Global_clearAll">Clear all</string>
+    <string name="Global_nextBtn">Next</string>
+    <string name="Global_cancel">Cancel</string>
+    <string name="Global_close">Close</string>
+    <string name="Global_error">Error</string>
+    <string name="Global_edit">Edit</string>
+    <string name="Global_details_underlined"><u>details</u></string>
+    <string name="Global_remove">Remove</string>
+    <string name="Global_pounds_price">£%.2f</string>
+    <string name="Global_permissions">Нou must provide the necessary permissions</string>
+    <string name="Global_dashboard">Dashboard</string>
+    <string name="global_administrator">Administrator</string>
+</resources>

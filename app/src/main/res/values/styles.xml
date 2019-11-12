@@ -1,0 +1,284 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorText</item>
+        <item name="colorControlNormal">@color/colorText</item>
+        <item name="colorControlActivated">@color/colorText</item>
+        <item name="colorControlHighlight">@color/colorText</item>
+        <item name="android:editTextColor">@color/colorText</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:actionMenuTextColor">@android:color/black</item>
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextAppearance</item>
+    </style>
+
+    <style name="myCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="android:indeterminateTint">@color/colorAccentActivated</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="navTextInactive">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="navTextActive">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#29FFFFFF</item>
+    </style>
+    <!--Base text style-->
+    <style name="HugeTextBold">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HugeTextBoldLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HugeTextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="HugeTextRegularLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="LargeTextBold">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LargeTextBoldLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LargeTextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Title" parent="LargeTextRegular">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="LargeTextItalic">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="LargeTextRegularLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="LargeTextItalicLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="MiddleTextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MiddleTextItalic">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="MiddleTextRegularLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MiddleTextItalicLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="SmallTextBold">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SmallTextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LittleTextBold">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LittleTextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LittleTextBoldLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LittleTextRegularLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="ForgotPasswordSubTitle">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="SmallTextItalic">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="CampaignNamePriceText">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SmallTextCapsBold">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SmallTextBoldLight">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SmallTextRegularLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SmallTextRegularWhite">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="SmallTextItalicLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="SmallTextCapsBoldLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SmallTextCapsRegular">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TinyTextRegularMain">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TinyTextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TinyTextRegularLight">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="DeviceDetailsPhotoTextButton">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="LO_TextRegular">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Base text style-->
+
+    <style name="LogoTitle" parent="HugeTextRegularLight">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="BottomLogoTitle" parent="LogoTitle">
+        <item name="android:layout_gravity">bottom|center</item>
+    </style>
+
+    <style name="IconText" parent="SmallTextRegularLight">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!--Buttons-->
+
+    <style name="RedBtn" parent="LargeTextRegular">
+        <item name="android:padding">15dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/red_btn</item>
+    </style>
+
+    <style name="RedBtnStroke" parent="RedBtn">
+        <item name="android:background">@drawable/red_btn_stroke</item>
+        <item name="android:textColor">@color/colorAccentRed</item>
+    </style>
+
+    <!--Buttons-->
+
+    <style name="RootLayoutStyle">
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="SplashLabel">
+        <item name="android:textColor">@color/textColorMain</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2A3845</color>
+    <color name="colorPrimaryDark">#2A3845</color>
+    <color name="colorAccent">#5B9B9F</color>
+    <color name="colorAccentActivated">#8BFFF8</color>
+    <color name="colorDarkTitle">#4DDADADB</color>
+    <color name="colorText">#AAAFB5</color>
+    <color name="colorAccentRed">#F46872</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorTextInputLayoutGray">#29FFFFFF</color>
+    <color name="colorAccentLight">#426A72</color>
+
+    <color name="colorDarkGrey">#56606A</color>
+
+    <color name="textColorMain">#FFFFFFFF</color>
+    <color name="textColorWhite">#FFFFFFFF</color>
+    <color name="textColorGray">#757575</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#999999</color>
+
+    <color name="buttomBarColor">#55606A</color>
+    <color name="buttomBarItem">#A5A5A8</color>
+
+    <!--Calendar-->
+    <color name="daysLabelColor">#314253</color>
+    <color name="selectedDaysLabelColor">#2A3845</color>
+    <!--Calendar-->
+
+    <color name="inner_card">#222D37</color>
+
+    <color name="arrow_inactive">#B3FFFFFF</color>
+
+</resources>
