@@ -1,10 +1,11 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Designation(
+open class Designation(
     @SerializedName("expanded")
-    val expanded: String? = null,
+    var expanded: String? = null,
     @SerializedName("abbreviated")
-    val abbreviated: String? = null
-)
+    var abbreviated: String? = null
+) : RealmObject()

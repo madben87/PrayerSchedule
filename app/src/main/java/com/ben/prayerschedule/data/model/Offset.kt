@@ -1,24 +1,25 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Offset(
+open class Offset(
     @SerializedName("sunset")
-    val sunset: Int? = null,
+    var sunset: Int? = null,
     @SerializedName("asr")
-    val asr: Int? = null,
+    var asr: Int? = null,
     @SerializedName("isha")
-    val isha: Int? = null,
+    var isha: Int? = null,
     @SerializedName("fajr")
-    val fajr: Int? = null,
+    var fajr: Int? = null,
     @SerializedName("dhuhr")
-    val dhuhr: Int? = null,
+    var dhuhr: Int? = null,
     @SerializedName("maghrib")
-    val maghrib: Int? = null,
+    var maghrib: Int? = null,
     @SerializedName("sunrise")
-    val sunrise: Int? = null,
+    var sunrise: Int? = null,
     @SerializedName("midnight")
-    val midnight: Int? = null,
+    var midnight: Int? = null,
     @SerializedName("imsak")
-    val imsak: Int? = null
-)
+    var imsak: Int? = null
+) : RealmObject()

@@ -8,12 +8,14 @@ import android.widget.ProgressBar
 import androidx.lifecycle.Observer
 import com.ben.prayerschedule.R
 import com.ben.prayerschedule.extensions.obtainViewModel
+import com.ben.prayerschedule.realm.RealmManager
 import com.ben.prayerschedule.ui.ProgressActivity
 import com.ben.prayerschedule.util.DialogFactory
 import com.ben.prayerschedule.util.DialogFactoryType
 import com.ben.prayerschedule.util.PermissionUtils
 import com.ben.prayerschedule.util.StateEnum
 import kotlinx.android.synthetic.main.activity_splash.*
+import org.threeten.bp.LocalDate
 
 class SplashActivity : ProgressActivity() {
 
@@ -40,7 +42,8 @@ class SplashActivity : ProgressActivity() {
 
                     }
                     StateEnum.COMPLETE -> {
-
+                        val d = RealmManager.getInstance().getSchedule(LocalDate.now())
+                        val f = d
                     }
                     StateEnum.ERROR -> {
 

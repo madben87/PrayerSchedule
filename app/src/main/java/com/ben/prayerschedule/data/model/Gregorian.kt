@@ -1,20 +1,21 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Gregorian(
+open class Gregorian(
     @SerializedName("date")
-    val date: String? = null,
+    var date: String? = null,
     @SerializedName("month")
-    val month: Month? = null,
+    var month: Month? = null,
     @SerializedName("year")
-    val year: String? = null,
+    var year: String? = null,
     @SerializedName("format")
-    val format: String? = null,
+    var format: String? = null,
     @SerializedName("weekday")
-    val weekday: Weekday? = null,
+    var weekday: Weekday? = null,
     @SerializedName("designation")
-    val designation: Designation? = null,
+    var designation: Designation? = null,
     @SerializedName("day")
-    val day: String? = null
-)
+    var day: String? = null
+) : RealmObject()

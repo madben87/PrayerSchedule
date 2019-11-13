@@ -1,10 +1,11 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Params(
+open class Params(
     @SerializedName("isha")
-    val isha: Int? = null,
+    var isha: Int? = null,
     @SerializedName("fajr")
-    val fajr: Int? = null
-)
+    var fajr: Int? = null
+) : RealmObject()

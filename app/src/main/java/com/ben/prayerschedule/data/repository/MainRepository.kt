@@ -15,7 +15,7 @@ class MainRepository : MainDataSource {
         country: String,
         month: Int,
         year: Int
-    ): Flowable<List<AppResponse>> {
+    ): Flowable<AppResponse> {
         return Api.client.create(MainApi::class.java)
             .getCalendarByCity(city, country, DEFAULT_METHOD, month, year).map {
                 return@map it

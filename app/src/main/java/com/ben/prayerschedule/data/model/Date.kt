@@ -1,10 +1,11 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Date(
+open class Date(
     @SerializedName("hijri")
-    val hijri: Hijri? = null,
+    var hijri: Hijri? = null,
     @SerializedName("gregorian")
-    val gregorian: Gregorian? = null
-)
+    var gregorian: Gregorian? = null
+) : RealmObject()

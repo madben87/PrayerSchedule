@@ -1,12 +1,13 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Method(
+open class Method(
     @SerializedName("name")
-    val name: String? = null,
+    var name: String? = null,
     @SerializedName("id")
-    val id: Int? = null,
+    var id: Int? = null,
     @SerializedName("params")
-    val params: Params? = null
-)
+    var params: Params? = null
+) : RealmObject()

@@ -18,7 +18,7 @@ class MyApplication : Application(), LifecycleObserver {
         super.onCreate()
         Realm.init(this)
         val realmConfiguration = RealmConfiguration.Builder()
-            .name("hologo.realm")
+            .name("prayer.realm")
             .schemaVersion(1)
             .deleteRealmIfMigrationNeeded()
             .build()

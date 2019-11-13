@@ -10,7 +10,7 @@ interface MainDataSource {
         country: String,
         month: Int,
         year: Int
-    ): Flowable<List<AppResponse>>
+    ): Flowable<AppResponse>
 
     companion object {
         val repository: MainDataSource = MainRepository()

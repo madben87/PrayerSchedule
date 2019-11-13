@@ -13,5 +13,5 @@ interface MainApi {
         @Query("city") city: String, @Query("country") country: String
         , @Query("method") method: Int, @Query("month") month: Int, @Query("year") year: Int
     ):
-            Observable<List<AppResponse>>
+            Observable<AppResponse>
 }

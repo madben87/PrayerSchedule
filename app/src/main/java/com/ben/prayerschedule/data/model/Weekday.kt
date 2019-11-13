@@ -1,11 +1,11 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Weekday(
-
+open class Weekday(
     @field:SerializedName("ar")
-    val ar: String? = null,
+    var ar: String? = null,
     @field:SerializedName("en")
-    val en: String? = null
-)
+    var en: String? = null
+) : RealmObject()

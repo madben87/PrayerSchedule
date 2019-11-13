@@ -1,24 +1,25 @@
 package com.ben.prayerschedule.data.model
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Timings(
+open class Timings(
     @SerializedName("Asr")
-    var asr: String,
+    var asr: String? = null,
     @SerializedName("Dhuhr")
-    var dhuhr: String,
+    var dhuhr: String? = null,
     @SerializedName("Fajr")
-    var fajr: String,
+    var fajr: String? = null,
     @SerializedName("Imsak")
-    var imsak: String,
+    var imsak: String? = null,
     @SerializedName("Isha")
-    var isha: String,
+    var isha: String? = null,
     @SerializedName("Maghrib")
-    var maghrib: String,
+    var maghrib: String? = null,
     @SerializedName("Midnight")
-    var midnight: String,
+    var midnight: String? = null,
     @SerializedName("Sunrise")
-    var sunrise: String,
+    var sunrise: String? = null,
     @SerializedName("Sunset")
-    var sunset: String
-)
+    var sunset: String? = null
+) : RealmObject()
