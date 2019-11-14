@@ -9,6 +9,7 @@
     <color name="colorAccentRed">#F46872</color>
     <color name="colorTransparent">#00000000</color>
     <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorWhiteSemitransparrent">#50FFFFFF</color>
     <color name="colorTextInputLayoutGray">#29FFFFFF</color>
     <color name="colorAccentLight">#426A72</color>
 

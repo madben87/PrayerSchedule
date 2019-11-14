@@ -6,6 +6,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.ben.prayerschedule.data.model.CalendarType
 import com.jakewharton.threetenabp.AndroidThreeTen
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -43,6 +44,7 @@ class MyApplication : Application(), LifecycleObserver {
         fun getApp(context: Context): MyApplication {
             return context.applicationContext as MyApplication
         }
-    }
 
+        var CALENDAR_TYPE = CalendarType.GREGORIAN
+    }
 }

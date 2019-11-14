@@ -14,6 +14,7 @@ import com.ben.prayerschedule.data.repository.MainDataSource
 import com.ben.prayerschedule.realm.RealmManager
 import com.ben.prayerschedule.util.MyAndroidViewModel
 import com.ben.prayerschedule.util.StateEnum
+import com.example.hologo.prefs.LocationPrefs
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.rxkotlin.subscribeBy
@@ -42,8 +43,17 @@ class SplashViewModel(val context: Application) : MyAndroidViewModel(context) {
                     if (addressList.size > 0) {
                         city = addressList.get(0).locality
                         country = addressList.get(0).countryName
-                        getSchedule()
                         isLocationLoaded = true
+
+                        if (isSameLocation(city, country)) {
+                            RealmManager.getInstance().getSchedule(LocalDate.now())?.let {
+                                state.value = StateEnum.COMPLETE
+                            } ?: kotlin.run {
+                                getSchedule()
+                            }
+                        } else {
+                            getSchedule()
+                        }
                     }
                 }
 
@@ -63,6 +73,19 @@ class SplashViewModel(val context: Application) : MyAndroidViewModel(context) {
             TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
+    }
+
+    fun isSameLocation(city: String, country: String): Boolean {
+        var result = true
+        if (LocationPrefs.city.isEmpty() || LocationPrefs.city != city) {
+            LocationPrefs.city = city
+            result = false
+        }
+        if (LocationPrefs.country.isEmpty() || LocationPrefs.country != country) {
+            LocationPrefs.country = country
+            result = false
+        }
+        return result
     }
 
     init {

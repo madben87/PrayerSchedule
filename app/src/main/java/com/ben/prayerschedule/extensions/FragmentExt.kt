@@ -41,8 +41,8 @@ fun Fragment.showError(errorText: String) {
 
     )
     dialog.buttonFirst.setOnClickListener {
-        UserPrefs.authToken = ""
-        UserPrefs.userId = 0
+        LocationPrefs.authToken = ""
+        LocationPrefs.userId = 0
         RealmManager.getInstance().delete(User::class.java)
         dialog.dismiss()
         view?.findNavController()?.navigate(com.example.hologo.R.id.action_global_signOut)
@@ -54,7 +54,7 @@ fun Fragment.showError(errorText: String) {
     }
 
     dialog.setOnDismissListener {
-        if (UserPrefs.authToken != "") {
+        if (LocationPrefs.authToken != "") {
             val navHostFragment =
                 activity?.supportFragmentManager?.findFragmentById(R.id.nav_main_fragment)
             val backStackEntryCount = navHostFragment?.childFragmentManager?.backStackEntryCount

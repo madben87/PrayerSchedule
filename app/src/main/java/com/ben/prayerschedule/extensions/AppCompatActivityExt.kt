@@ -85,7 +85,7 @@ private inline fun FragmentManager.transact(action: FragmentTransaction.() -> Un
 
 /*
 fun AppCompatActivity.userIsValid(): Boolean {
-    if (RealmManager.getInstance().getUser(UserPrefs.userId)?.handBasedVerificationStatus == Constants.NON_VERIFIED) {
+    if (RealmManager.getInstance().getUser(LocationPrefs.userId)?.handBasedVerificationStatus == Constants.NON_VERIFIED) {
         var dialog = DialogFactory(
             DialogFactoryType.ERROR,
             this
@@ -93,7 +93,7 @@ fun AppCompatActivity.userIsValid(): Boolean {
             this.resources.getText(com.example.hologo.R.string.Global_close).toString())
 
         dialog.setOnDismissListener {
-            if (UserPrefs.authToken != "") {
+            if (LocationPrefs.authToken != "") {
                 val navHostFragment =
                     this.supportFragmentManager.findFragmentById(R.id.nav_main_fragment)
                 val backStackEntryCount = navHostFragment?.childFragmentManager?.backStackEntryCount
@@ -106,7 +106,7 @@ fun AppCompatActivity.userIsValid(): Boolean {
 
         dialog.show()
         return false
-    }else if (RealmManager.getInstance().getUser(UserPrefs.userId)?.handBasedVerificationStatus == Constants.REJECTED) {
+    }else if (RealmManager.getInstance().getUser(LocationPrefs.userId)?.handBasedVerificationStatus == Constants.REJECTED) {
         var dialog = DialogFactory(
             DialogFactoryType.ERROR,
             this
@@ -114,7 +114,7 @@ fun AppCompatActivity.userIsValid(): Boolean {
             this.resources.getText(com.example.hologo.R.string.Global_close).toString())
 
         dialog.setOnDismissListener {
-            if (UserPrefs.authToken != "") {
+            if (LocationPrefs.authToken != "") {
                 val navHostFragment =
                     this.supportFragmentManager.findFragmentById(R.id.nav_main_fragment)
                 val backStackEntryCount = navHostFragment?.childFragmentManager?.backStackEntryCount

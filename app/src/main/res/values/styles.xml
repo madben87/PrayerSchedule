@@ -15,33 +15,10 @@
         <item name="android:editTextColor">@color/colorText</item>
         <item name="android:textColor">@color/colorText</item>
         <item name="android:actionMenuTextColor">@android:color/black</item>
-        <item name="android:itemTextAppearance">@style/myCustomMenuTextAppearance</item>
     </style>
 
-    <style name="myCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
-        <item name="android:textColor">@android:color/black</item>
-    </style>
-
-    <style name="CircularProgress" parent="Theme.AppCompat.Light">
-        <item name="android:indeterminateTint">@color/colorAccentActivated</item>
-    </style>
-
-    <style name="ToolbarColoredBackArrow" parent="AppTheme">
-        <item name="colorControlNormal">@android:color/white</item>
-    </style>
-
-    <style name="navTextInactive">
-        <item name="android:textSize">10sp</item>
-    </style>
-
-    <style name="navTextActive">
-        <item name="android:textSize">10sp</item>
-    </style>
-
-    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
-        <item name="android:textColor">#29FFFFFF</item>
-    </style>
     <!--Base text style-->
+
     <style name="HugeTextBold">
         <item name="android:textColor">@color/textColorMain</item>
         <item name="android:textSize">20sp</item>
@@ -231,32 +208,12 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="DeviceDetailsPhotoTextButton">
-        <item name="android:textColor">@color/colorText</item>
-        <item name="android:textSize">12sp</item>
-    </style>
+    <!--Base text styles-->
 
-    <style name="LO_TextRegular">
+    <style name="SplashLabel">
         <item name="android:textColor">@color/textColorMain</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">32sp</item>
     </style>
-
-    <!--Base text style-->
-
-    <style name="LogoTitle" parent="HugeTextRegularLight">
-        <item name="android:textAlignment">center</item>
-        <item name="android:layout_gravity">center</item>
-    </style>
-
-    <style name="BottomLogoTitle" parent="LogoTitle">
-        <item name="android:layout_gravity">bottom|center</item>
-    </style>
-
-    <style name="IconText" parent="SmallTextRegularLight">
-        <item name="android:textSize">12dp</item>
-    </style>
-
-    <!--Buttons-->
 
     <style name="RedBtn" parent="LargeTextRegular">
         <item name="android:padding">15dp</item>
@@ -270,15 +227,9 @@
         <item name="android:textColor">@color/colorAccentRed</item>
     </style>
 
-    <!--Buttons-->
-
-    <style name="RootLayoutStyle">
-        <item name="android:padding">10dp</item>
-    </style>
-
-    <style name="SplashLabel">
-        <item name="android:textColor">@color/textColorMain</item>
-        <item name="android:textSize">32sp</item>
+    <style name="Date_item" parent="LargeTextRegular">
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@drawable/date_item__selector</item>
     </style>
 
 </resources>

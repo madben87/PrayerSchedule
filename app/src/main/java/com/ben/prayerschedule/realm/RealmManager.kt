@@ -23,8 +23,11 @@ class RealmManager private constructor() {
     fun getSchedule(date: LocalDate): MonthlySchedule? {
         val realm = Realm.getDefaultInstance()
         val id = DateUtil.getKey()
-        val temp = realm.where(MonthlySchedule::class.java).findAll()
-        return realm.copyFromRealm(temp[0])
+        val temp = realm.where(MonthlySchedule::class.java).equalTo("id", id).findAll()
+        if (temp.size > 0)
+            return realm.copyFromRealm(temp[0])
+        else
+            return null
     }
 
     companion object {
