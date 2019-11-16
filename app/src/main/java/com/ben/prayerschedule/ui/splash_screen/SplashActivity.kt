@@ -55,7 +55,8 @@ class SplashActivity : ProgressActivity() {
             })
         }
 
-        checkPermission(Runnable { setLocationListener() },
+        checkPermission(
+            Runnable { setLocationListener() },
             Runnable { showDialogNoPermission() },
             PermissionUtils.ACCESS_COARSE_LOCATION,
             PermissionUtils.LOCATION_PERMISSION

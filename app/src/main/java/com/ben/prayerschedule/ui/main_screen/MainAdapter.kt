@@ -23,7 +23,7 @@ class MainAdapter(var context: Context) : RecyclerView.Adapter<MainAdapter.DateV
             notifyDataSetChanged()
         }
 
-    var actionItemClick: (schedule: DailySchedule) -> Unit = {}
+    var actionItemClick: (timestamp: String) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DateViewHolder {
         return DateViewHolder(
@@ -49,23 +49,9 @@ class MainAdapter(var context: Context) : RecyclerView.Adapter<MainAdapter.DateV
         val date = itemView.date
         fun bind(
             schedule: DailySchedule,
-            actionItemClick: (schedule: DailySchedule) -> Unit,
+            actionItemClick: (timestamp: String) -> Unit,
             position: Int
         ) {
-
-            /*schedule.date?.timestamp?.toLong()?.let {
-                val dateValue = Instant.ofEpochMilli(it * 1000).atZone(ZoneId.systemDefault())
-                    .toLocalDate()
-
-                //date.isActivated = dateValue.equals(LocalDate.now())
-
-                if (dateValue.equals(LocalDate.now())) {
-                    date.isActivated = true
-                    actionScrollToPosition.invoke(position)
-                } else {
-                    date.isActivated = false
-                }
-            }*/
 
             date.isActivated = position == todayPosition
 
@@ -89,7 +75,9 @@ class MainAdapter(var context: Context) : RecyclerView.Adapter<MainAdapter.DateV
             }
 
             date.setOnClickListener {
-                actionItemClick.invoke(schedule)
+                schedule.date?.timestamp?.let {
+                    actionItemClick.invoke(it)
+                }
             }
         }
     }

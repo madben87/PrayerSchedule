@@ -232,4 +232,12 @@
         <item name="android:background">@drawable/date_item__selector</item>
     </style>
 
+    <style name="PrayerTitle" parent="HugeTextBold" >
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="PrayerTime" parent="LargeTextItalic" >
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
